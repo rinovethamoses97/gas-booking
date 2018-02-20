@@ -1,0 +1,136 @@
+<html>
+<head>
+<style>
+ 
+	h2, label{
+		color:#000860;
+		}
+		body{
+			font-family: verdana;
+			font-weight: bold;
+			text-transform: capitalize;
+		}
+	input[type=email], #feed {
+		width: 50%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	}
+	div.form
+	{
+          margin: 25%;
+          margin-top: 0%
+	}
+	input[type=button]{
+	display: inline;
+    background-color: #217AD3;
+    color: white;
+   padding: 14px 20px;
+   margin: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    left: 50px;
+   
+}
+}
+input[type=button]:hover {
+		background-color: #02036b;
+		
+		}
+</style>
+</head>
+<body bgcolor="pink">   
+<h2><center> Please help us to serve you better by filling out a feedback form:</center></h2> 
+
+<div class=form>
+    <form id="form1">   
+    <label>Email:</label><br/><input type="email" name="email" id="email" onkeyup="check1()"><br>
+    <p id="maerr"></p>
+    <br>
+    <label>what do you think about quality of our product?</label>
+    <br/><br/>
+    <input type="radio" name="qua">excellent
+    <input type="radio" name="qua">good
+  <input type="radio" name="qua" checked>average
+  <input type="radio" name="qua">poor
+  <br/><br/>
+ <label> how would you rate our service?</label>
+  <br/><br/>
+  <input type="radio" name="satis">excellent
+    <input type="radio" name="satis">good
+  <input type="radio" name="satis" checked>average
+  <input type="radio" name="satis">poor
+  <br/><br/>
+  <label>Was our customer service provided to you in accessible manner?</label>
+  <br/><br/>
+  <input type="radio" name="acc">yes
+    <input type="radio" name="acc">no
+  <input type="radio" name="acc" checked>somewhat
+  <br/><br/>
+
+      <label>feedback:</label><br/><textarea name="feed" id="feed" onkeyup="check2()"></textarea> 
+      <p id="maerr1"></p>
+    <input value="submit" type="button" onclick="final()">
+    </form>
+    </div>
+</body>
+
+<script>
+flag1=0;
+flag2=0;
+function myfunction()
+{
+  alert("thank you for your feedback");
+ }
+ function check1()
+ {
+  var a = document.getElementById("email").value;
+ var re =/\S+@\S+\.\S+/;
+ var result=re.test(a);
+if(!result)
+     {
+      flag1=0;
+     document.getElementById("maerr").innerHTML="*mail-id not valid";
+     }
+     else
+     {
+      document.getElementById("maerr").innerHTML="valid";
+       flag1=1;
+    }
+
+ }
+ function check2()
+ {
+  var data=document.getElementById("feed").value;
+
+  if(data=="")
+  {
+    flag2=0;
+    document.getElementById("maerr1").innerHTML="cannot be empty";
+  }
+  else
+  {
+     document.getElementById("maerr1").innerHTML="";
+    flag2=1;
+  }
+
+   }
+
+ function final()
+ {
+//alert("ee"+flag1);
+    if(flag1==0 || flag2==0)
+    {
+      alert("please enter the fields properly");
+    }
+    else
+    {
+      alert("Thanks for your feedback");
+    }
+ }
+</script>
+</html>

@@ -1,0 +1,271 @@
+<html>
+<head>
+<style>
+#new_connection,h3,p
+{
+	//text-align: center;
+}
+
+body {
+	font-family: Book Antiqua;
+	font-weight: bold;
+	background: url(http://www.scienceteller.com/resources/SciTell-Background.gif) ;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+input[type=text],input[type=mail],input[type=password],input[type=number],input[type=date],#district,#distributor {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	}
+input[type=submit]{
+	display: inline;
+    background-color: #217AD3;
+    color: white;
+   padding: 14px 20px;
+   margin: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    left: 50px;
+   
+}
+}
+input[type=submit]:hover {
+		background-color: #02036b;
+		
+		}
+.container {
+    padding: 50px 50px 50px 50px;	
+    background-color: #ffffff;
+	opacity: 0.9;
+    width: 100px;
+    border: 1px solid #ccc;
+	/*margin-right: 50%;
+	margin-left: 40%;
+	margin-top: 5%;*/
+    border-radius: 4px;
+}
+.feed {
+     display: inline-flex;
+	 margin-left: 20%;
+	 }
+.img{
+    margin: 5%;
+    
+	}
+</style>
+<title>Tamilnadu Gas</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+</head>
+<body>
+<nav class="navbar navbar-inverse" >
+  <div class="container-fluid">
+    <div class="navbar-header" >
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Tamilnadu Gas</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li ><a href="index.html">Home</a></li>     
+        <li class="dropdown">
+          
+        </li>
+        <li class="active"><a href="register.html">Register for Connection</a></li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html#login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<center><h3 style="color: white;  font-family: Verdana;">Register for LPG connection</h3>
+<p style="color: white; font-family: Verdana;">All fields are mandatory</p></center>
+<div class="container">
+<div class="img">
+<img src="https://indane.co.in/images/cylinder-img.jpg" style="float:left;">
+</div>
+<div class="feed">
+<form method="post" action="customer.php" id="new_connection">
+<label for="district">District:<span style="color:red;">*</span></label>
+<select name="district" id="district" onchange="getdistributor(this.value)" required>
+<option value="" selected disabled>[select district]</option>
+<option value="kancheepuram">kancheepuram</option>
+<option value="thirunelveli">Thirunelveli</option>
+<option value="Kanyakumari">Kanyakumari</option>
+</select><br>
+<label for="distributor">Distributor:<span style="color:red;">*</span></label>
+<select  id="distributor" name="distributor" >
+<option selected disabled value="">[select distributor]</option>
+</select>
+
+<br>
+<label for="name">No.of members in family:<span style="color:red;">*</span></label>
+<input type="number" name="noofmember" id="noofmember" placeholder="No of member" required>
+<br>
+<label for="name">Name:<span style="color:red;">*</span></label>
+<input type="text" name="name" id="name" placeholder="Enter name" required>
+<br>
+
+<label for="name">No.of Cylinders:<span style="color:red;">*</span></label>
+<input type="number" name="noofcylinder" id="noofcylinder" placeholder="No of cylinder" required>
+<br>
+
+<label for="name">AADAR card no:<span style="color:red;">*</span></label>
+<input type="number" name="" id="aadar" placeholder="AAdar no" onkeyup="aad()" required>
+<p style="color:red;font-weight:bold" id="spp"></p>
+
+<label for="dob">Date Of Birth:<span style="color:red;">*</span></label>
+<input type="date" name="dob" id="dob" placeholder="date of birth" required>
+<br>
+<label for="phoneno">Phone No:<span style="color:red;">*</span></label>
+<input type="text" name="phoneno" id="phoneno" maxlength="10" placeholder="phone no" onkeyup="phvalid()" required><p style="color:red;font-weight:bold" id="err"></p>
+<label for="email">E-Mail Id:<span style="color:red;">*</span></label>
+<input type="mail" name="email" id="email" onkeyup="mail()" placeholder="email id" required>
+<p style="color:red;font-weight:bold" id="maerr"></p>
+<label for="password">Password:<span style="color:red;">*</span></label>
+<input type="password" name="password" id="password" onkeyup="valid()" placeholder="password"><br>
+<label for="repassword">Re-Password:<span style="color:red;">*</span></label> 
+<input type="password" name="repassword" id="repassword" onkeyup="valid()" placeholder="re-enter password">
+<p style="color:red;font-weight:bold" id="p1"></p>
+<br>
+<input type="submit" value="Register" onclick="check()">
+</form>
+</div>
+</div>
+<script>
+var flag1=0;
+var flag2=0;
+function mail()
+{
+  var a = document.getElementById("email").value;
+ var re =/\S+@\S+\.\S+/;
+ var result=re.test(a);
+if(!result)
+     {
+      flag1=0;
+     document.getElementById("maerr").innerHTML="*mail-id not valid";
+     }
+     else
+     {
+     	document.getElementById("maerr").innerHTML="valid";
+       flag1=1;
+    }
+ }
+ function aad()
+ {
+  var a=document.getElementById("aadar").value;
+  if(a.length<12)
+  {
+    document.getElementById("spp").innerHTML="not valid";
+  }
+  else
+  {
+   document.getElementById("spp").innerHTML="valid"; 
+  }
+ }
+function check()
+{
+
+  if(flag1==1 && flag2==1)
+  {
+        
+  }
+  else
+  {
+    alert("fill all the fields");
+    event.preventDefault();
+    //location="register.html";
+  }
+}
+function phvalid()
+{
+
+	var pattern=/^\d{10}$/;
+
+	var ph=document.getElementById("phoneno").value;
+     var result=pattern.test(ph);
+     if(!result)
+     {
+      flag1=0;
+     document.getElementById("err").innerHTML="*phoneno not valid";
+     }
+     else
+     {
+     	document.getElementById("err").innerHTML="valid";
+       flag1=1;
+    }
+}
+function valid()
+{
+
+	var a=document.getElementById("password").value;
+	var b=document.getElementById("repassword").value;
+	if(a!=b)
+	{
+    flag2=0;
+    document.getElementById("p1").innerHTML="*password didn't match";
+	}
+	else
+  {
+      flag2=1;
+	    document.getElementById("p1").innerHTML="Matched";	
+  }
+}
+function getdistributor(a)
+{
+	var list=document.getElementById("distributor");
+    while (list.firstChild) {
+    list.removeChild(list.firstChild);
+}
+if(a=="[select district]")
+{
+	 var a=document.getElementById("distributor");
+	var b=document.createElement("option");
+	b.setAttribute("disabled","true");
+	b.setAttribute("selected","true");
+	var t = document.createTextNode("[select distributor]");
+
+	b.appendChild(t);
+	a.appendChild(b);
+}
+	 xmlhttp=new XMLHttpRequest();
+  xmlhttp.onreadystatechange=function() {
+    if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+
+		 var obj= JSON.parse(this.responseText);
+
+         for(i=0;i<obj.length;i++)
+         {
+          var a=document.getElementById("distributor");
+	var b=document.createElement("option");
+	b.setAttribute("value",obj[i]);
+	var t = document.createTextNode(obj[i]);
+
+	b.appendChild(t);
+	a.appendChild(b);
+}
+
+  }
+  }
+  xmlhttp.open("GET","getdistributor.php?q="+a,true);
+  xmlhttp.send();
+	
+}
+</script>
+</body>
+</html>

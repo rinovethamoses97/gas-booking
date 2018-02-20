@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+body
+{
+  background:url("https://www.xmple.com/wallpaper/linear-yellow-gradient-red-1920x1080-c2-f6d83c-f6523c-a-165-f-14.svg");
+ 
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+#about
+{
+  border:1px solid black;
+  background-color: white;
+  width:100%;
+  height:400px;
+  opacity: 0.9;
+  overflow-y: scroll;   
+}
+
+#loginform
+{
+  text-align:center;
+  padding-top:50px;
+}
+#login
+{
+background-color: white;
+  border: 1px solid black;
+  width:100%;
+  height:500px;
+  /*margin-top:-10px;*/
+  opacity: 0.9;
+   overflow-y: scroll;   
+}
+#contact
+{
+background-color: white;
+   border: 1px solid black;
+  width:100%;
+  height:500px;
+  /*margin-top: 120px;*/
+  opacity: 0.9;
+  overflow-y: scroll;   
+}
+h1
+{
+  text-align:center;
+  /*text-decoration: underline;*/
+}
+p {
+   padding: 20px;
+   font-family: Verdana;
+   color: blue;
+    text-indent: 50px;
+
+   }
+   #title
+   {
+    width:100%;
+   }
+	input[type=mail],input[type=password],#category {
+	width: 100%;
+	padding: 12px 20px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	}
+input[type=submit]{
+	display: inline;
+    background-color: #217AD3;
+    color: white;
+   padding: 14px 20px;
+   margin: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    left: 25px;
+   
+}
+}
+input[type=submit]:hover {
+		background-color: #02036b;
+		
+		}
+</style>
+<head>
+  <title>Tamilnadu Gas</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse" >
+  <!-- <div class="container-fluid">
+    <div class="navbar-header" >
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button> -->
+      <!-- <a class="navbar-brand" href="#">Tamilnadu Gas</a> -->
+    <!-- </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>     
+        <li class="dropdown">
+          
+        </li>
+        <li><a href="register.html">Register for Connection</a></li>
+        <li><a href="#contact">Contact</a></li> 
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#loginScroll"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div> -->
+  
+<h1 style="color:white"><img src="http://dsgasoil.com/wp-content/uploads/2017/08/Gas-fire-icon.png" style="width:10%;height:10%;margin-top:-20px"></img>TAMILNADU GAS</h1>
+</nav>
+  
+<div class="container">
+<center>
+<!-- <marquee  scrollamount="7" loop="infinite" scrolldelay="0.5" onmouseover="stop()" onmouseout="start()"> -->
+<a href="#loginScroll"><img src="book.jpg"></a>
+<a href="register.html"><img src="register_connection.jpg"></a>
+<!-- <a href=""><img src="https://indane.co.in/transparency/images/ujjwalaBeneficary.png"></a> -->
+<!-- <a href=""><img src="https://indane.co.in/transparency/images/opt_subsidy.png"></a>
+ --><a href="trail2.html"><img src="https://indane.co.in/transparency/images/give.png"></a>
+<!-- <a href=""><img src="https://indane.co.in/transparency/images/declare-income.png"></a> -->
+<!-- <a href=""><img src="https://indane.co.in/transparency/images/choose.png"></a> -->
+</center>
+</marquee>
+<div id="about">
+<h1 >ABOUT</h1>
+<p>Tamilnadu gas is today one of the largest packed-LPG brands in the world. Indian Oil pioneered the launch of LPG in India in the 1970s and transformed the lives of millions of people with the introduction of the clean, efficient and safe cooking fuel. LPG also led to a substantial improvement in the health of women in rural areas by replacing smoky and unhealthy chullahs with tamilnadu gas. It is today a fuel synonymous with safety, reliability and convenience.</p>
+<p>LPG is a blend of Butane and Propane readily liquefied under moderate pressure. LPG vapour is heavier than air; thus it normally settles down in low-lying places. Since LPG has only a faint scent, a mercaptan odorant is added to help in its detection. In the event of an LPG leak, the vapourisation of liquid cools the atmosphere and condenses the water vapour contained in it to form a whitish fog, which is easy to observe. LPG in fairly large concentrations displaces oxygen leading to a nauseous or suffocating feeling.</p>
+<p>Suraksha LPG hose, flame retardant aprons and energy efficient Green Label stoves are recommended to enhance safety measures while using LPG as fuel.</p>
+</div>
+<br>
+<br>
+<div id="loginScroll"></div>
+<br><br><br><br>
+<div id="login">
+<h1>LOGIN</h1>
+<div class="feed">
+<form action="login.php" method="post" id="loginform">
+<label for="category">Category:</label>
+<select name="category" id="category"  style="width:30%">
+<option value="customer">customer</option>
+<option value="distributor">distributor</option>
+</select><br><br><br>
+
+<label for="email">Email Id:&nbsp;&nbsp; </label>
+<input type="mail" style="width:30%;" onkeyup="mail()" name="email" id="email" placeholder="enter email id">
+<p id="maerr" style="color: red;"></p>
+<label for="password">Password: </label>
+<input type="password" style="width:30%"  name="password" id="password" placeholder="enter password"><br><br>
+<input type="submit">
+</form>
+</div>
+</div>
+<br>
+<br>
+<br><br><br>
+<div id="contact">
+<h1>CONTACT</h1>
+<p>In order to have a more convenient, easy and effective way to enable the customer to air their complaints and follow up on such complaints, IOC has started the service of using unique toll free numbers for the complaint registration through call centers from 2nd October 2008. Across the state IOC has a unique number<span style="color: red; font-weight: bold;">1234567899</span>, easy for the customers to remember.</p>
+<p>Through this single common number any customer can query or register complaints in the call centers being operated by all three oil companies.</p>
+<p>The call centers are operated region wise to facilitate the customers to lodge complaints in local language. Customers are given a registration number and those wish to know about the status of the complaints can call up the call centers in the same toll free numbers.</p>
+<p>The complaint lodging is in a manual mode for 8am to 8 pm and an IVRS mode during 8pm to 8 am.</p>
+</div>
+<br>
+<br>
+<br><br><br>
+</div>
+<script type="text/javascript">
+function mail()
+{
+  var a = document.getElementById("email").value;
+ var re =/\S+@\S+\.\S+/;
+ var result=re.test(a);
+if(!result)
+     {
+      flag1=0;
+     document.getElementById("maerr").innerHTML="*mail-id not valid";
+     }
+     else
+     {
+     	document.getElementById("maerr").innerHTML="valid";
+       flag1=1;
+    }
+ }
+  // Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+
+</script>
+</body>
+</html>
